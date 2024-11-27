@@ -1,14 +1,11 @@
 const express = require('express');
 const app = express();
 
-app.use((req, res, next) => {
-  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src *;");
-  next();
-});
-
 app.get('/search', (req, res) => {
   let searchTerm = req.query.term;
-  searchTerm = searchTerm.replace(/<script>.*?<\/script>/gi, ''); 
+
+  // Ha, good luck popping an alert now!
+  searchTerm = searchTerm.replace(/alert/i, '').replace(/src/i, '');
 
   res.send(`<h1>Search results for: ${searchTerm}</h1>`);
 });
