@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  node-app-day-3:
+  node-app-day-4:
     build: .
     ports:
       - "3000:3000"
