@@ -1,0 +1,15 @@
+{
+  "name": "xss-fun-challenges",
+  "version": "1.0.0",
+  "description": "This repo contains a series of XSS challenges that get harder and harder to exploit",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "pug": "^3.0.3"
+  }
+}
